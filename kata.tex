@@ -1,6 +1,10 @@
 \documentclass[11pt]{article}
 \usepackage{gb4e}
+\usepackage{multicol}
+\usepackage{multirow}
 \usepackage{tipa}
+\usepackage[inline]{enumitem}
+\usepackage[colorlinks]{hyperref}
 \usepackage{textcomp}
 %Gummi|065|=)
 
@@ -13,11 +17,34 @@
 
 \begin{document}
 
-\newcommand{\auxthreesg}{the }
+\newcommand{\dictitem}[3]{\item [#1] \textit{#2}. #3}
+\newcommand{\dictdef}[2]{\item \textit{#1}. #2}
+\newcommand{\inq}{{\color{red} (?)}}
+
 \maketitle
 
 
 \section{Phonology}
+
+\subsection{Inventory}
+\begin{center}
+\begin{tabular}{|l | l| *{7}{c} |}
+	\hline
+	\multicolumn{2}{|l|}{} & labial & dental & alveolar & palatal & velar & uvular & glottal \\ \hline
+	\multicolumn{2}{|l|}{nasal} & {\color{red} \textsubring{m}} m && {\color{red} \textsubring{n}} n && \textipa{N} && \\\cline{1-2}
+	\multirow{2}{*}{stop} & plain  & p &&  t d && k g && \\\cline{2-2}
+                          & labialized &&&&& k\textsuperscript{w} g\textsuperscript{w} && \\\cline{1-2}
+    \multicolumn{2}{|l|}{fricative}	& f v & \textipa{T} \textipa{D} & s z & \textipa{S} \textipa{Z}& x & {\color{red} \textipa{X}} \textipa{K} & h {\color{red} \textipa{H}} \\\cline{1-2}
+    \multirow{3}{*}{affricate} & siblant &&& ts & {\color{red} \textsubbar{d}\textipa{Z}} &&&\\\cline{2-2}
+                               & non-siblant &&&& \textsubbar{t}\textsubbar{\textipa{\r{\*r}}}.\inq   \textsubbar{d}\textsubbar{\textipa{\*r}}.\inq & kx && \\\cline{2-2}
+                               & lateral &&& t\textbeltl \inq d\textlyoghlig \inq &&&&\\\cline{1-2}
+    \multicolumn{2}{|l|}{approximant} & {\color{red} \textipa{V}} &&& j & w && \\\cline{1-2}
+    \multicolumn{2}{|l|}{lateral approximant} && l && \textipa{L} &&& \textltilde  \\\cline{1-2}
+    \multicolumn{2}{|l|}{tap} &&& {\color{red} \textipa{R}} &&&& \\\cline{1-2}
+	\multicolumn{2}{|l|}{trill} &&& r &&&& \\
+	\hline
+\end{tabular}
+\end{center}
 
 \subsection{Voicing assimilation}
 
@@ -95,7 +122,7 @@
 
 \begin{exe}
 \ex
-\gll roen \auxthreesg lekka nna \\
+\gll roen the lekka nna \\
  man AUX(3SG,) PERF.go away \\
 \trans the man who ran away
 
@@ -142,6 +169,15 @@ Nouns that are inalienably possessed must bear an indeterminate affix \textbf{i(
 \end{exe}
 
 
+\section{Noun plurality}
+\subsection{Singulative}
+TODO
+
+\subsection{Ablaut plural}
+Some (usually monosyllabic) nouns form their plural by raising and lengthening their last vowel.
+
+
+
 \section{Noun incorporation}
 
 \subsection{Animacy}
@@ -176,5 +212,33 @@ affix & meaning & example \\ \hline
 hw & nothing/noone & \textit{hwraza} - to love noone/nothing \\
 \end{tabular}
 \end{center}
+
+
+\section{Morphology}
+\subsection{affixes}
+\paragraph{Manner affixes}
+\begin{center}
+\begin{tabular}{| c | c | c |}
+  \hline
+  \textit{sma-} & sma-garra & kill with bare hands \\ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{Location-directional affixes} Do we need them?
+
+\section{Dictionary}
+\begin{multicols}{2}
+  \begin{description}
+  \dictitem{aanu}{N, cl4, O-Poss}{ mother}
+  \item [inha]
+  	\begin{enumerate*}
+  		\dictdef{N, cl3, PL - innan}{ winter}
+  		\dictdef{V} {to spend winter}
+  	\end{enumerate*}
+  
+  \dictitem{ket}{N, cl9, PL - kiit}{ a small bird, usually passerine}
+  \dictitem{kissa}{N, cl2}{ need (state of)}
+  \end{description}
+\end{multicols}
 
 \end{document}
