@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{book}
 \usepackage{gb4e}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -24,9 +24,9 @@
 \maketitle
 
 
-\section{Phonology}
+\chapter{Phonology}
 
-\subsection{Inventory}
+\section{Inventory}
 \begin{center}
 \begin{tabular}{|l | l| *{7}{c} |}
 	\hline
@@ -34,24 +34,50 @@
 	\multicolumn{2}{|l|}{nasal} & {\color{red} \textsubring{m}} m && {\color{red} \textsubring{n}} n && \textipa{N} && \\\cline{1-2}
 	\multirow{2}{*}{stop} & plain  & p &&  t d && k g && \\\cline{2-2}
                           & labialized &&&&& k\textsuperscript{w} g\textsuperscript{w} && \\\cline{1-2}
-    \multicolumn{2}{|l|}{fricative}	& f v & \textipa{T} \textipa{D} & s z & \textipa{S} \textipa{Z}& x & {\color{red} \textipa{X}} \textipa{K} & h {\color{red} \textipa{H}} \\\cline{1-2}
-    \multirow{3}{*}{affricate} & siblant &&& ts & {\color{red} \textsubbar{d}\textipa{Z}} &&&\\\cline{2-2}
-                               & non-siblant &&&& \textsubbar{t}\textsubbar{\textipa{\r{\*r}}}.\inq   \textsubbar{d}\textsubbar{\textipa{\*r}}.\inq & kx && \\\cline{2-2}
-                               & lateral &&& t\textbeltl \inq d\textlyoghlig \inq &&&&\\\cline{1-2}
-    \multicolumn{2}{|l|}{approximant} & {\color{red} \textipa{V}} &&& j & w && \\\cline{1-2}
+    \multicolumn{2}{|l|}{fricative}	& f v &
+                                   \textipa{T} \textipa{D} &
+                                   s z & \textipa{S} \textipa{Z}& x &
+                                   {\color{red} \textipa{X}\footnotemark[1]} \textipa{K} &
+                                   h {\color{red} \textipa{H}\footnotemark[2]} \\\cline{1-2}
+    \multirow{3}{*}{affricate} & siblant &&& ts & {\color{blue} \textsubbar{d}\textipa{Z}\footnotemark[3]} &&&\\\cline{2-2}
+                               & non-siblant &&&& \textsubbar{t}\textsubbar{\textipa{\r{\*r}}}. \textsubbar{d}\textsubbar{\textipa{\*r}}. & kx && \\\cline{2-2}
+                               & lateral &&& t\textbeltl d\textlyoghlig &&&&\\\cline{1-2}
+    \multicolumn{2}{|l|}{approximant} & {\color{red} \textipa{V}\footnotemark[4]} &&& j & w && \\\cline{1-2}
     \multicolumn{2}{|l|}{lateral approximant} && l && \textipa{L} &&& \textltilde  \\\cline{1-2}
-    \multicolumn{2}{|l|}{tap} &&& {\color{red} \textipa{R}} &&&& \\\cline{1-2}
+    \multicolumn{2}{|l|}{tap} &&& {\color{red} \textipa{R}\footnotemark[5]} &&&& \\\cline{1-2}
 	\multicolumn{2}{|l|}{trill} &&& r &&&& \\
 	\hline
 \end{tabular}
 \end{center}
+\footnotetext[1]{allophone of [\textipa{K}] after voiceless consonants}
+\footnotetext[2]{intervocalic allophone of [h]}
+\footnotetext[3]{dialectal variation of [\textipa{Z}]}
+\footnotetext[4]{allophone of [v]}
+\footnotetext[5]{intervocalic allophone of [d]}
+
+
+
+\section{Phonotactics}
+\subsection{General rules}
+\begin{enumerate}
+	\item Syllable structure is (C)(C)V(V)(V)(C)(C).
+	\item Word-final consonant clusters receive a murmured schwa at the end (todo examples)
+\end{enumerate}
+
 
 \subsection{Voicing assimilation}
+Stops preceded by a rhotic/nasal/voiced siblant receive +VOICE. Laterals do not participate in this type of assimilation
+\begin{exe}
+	\ex arda, arhda, anda, azda, alda
+	\ex asta, alta
+	\ex[*] {anta, arta, azta}
+	
+\end{exe}
 
 \paragraph{Nasals}
 
 \begin{exe}
-\ex V(n,m)CV \textrightarrow /ansa/ = [a\textsubring{n}sa], /anza/ = [anza]
+\ex V(n,m)CV \textrightarrow n;'[ /ansa/ = [a\textsubring{n}sa], /anza/ = [anza]
 \ex VC(n,m)V \textrightarrow /osma/ = [\textopeno s\textsubring{m}a], /ozma/ = [\textopeno zma] 
 \end{exe}
 
@@ -149,6 +175,19 @@ place AUX(2PL,6) APPL-LOC.eat \\
 \end{exe}
 
 
+
+\chapter{Verb}
+
+\section{Mood}
+\subsection{Irrealis}
+Unrealized events, obligations, conditions, negative commands. Scoping - irrealis check before or after +neg +q?
+
+\section{Aspect}
+
+
+
+
+\chapter{Noun}
 \section{Posession}
 
 \subsection{Posessive prefix harmony}
