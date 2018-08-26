@@ -1,4 +1,4 @@
-\documentclass[11pt]{book}
+\documentclass[8pt]{book}
 \usepackage{gb4e}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -17,14 +17,47 @@
 
 \begin{document}
 
+
 \newcommand{\dictitem}[3]{\item [#1] \textit{#2}. #3}
 \newcommand{\dictdef}[2]{\item \textit{#1}. #2}
 \newcommand{\inq}{{\color{red} (?)}}
-
+\newcommand{\labial}{\textsuperscript{w}}
+\newcommand{\aspirated}{\textsuperscript{h}}
+\newcommand{\palatal}{\textsuperscript{j}}
 \maketitle
 
 
 \chapter{Phonology}
+%%%%%%%%%%%%
+\iffalse
+\addtolength{\hoffset}{-32pt}
+
+\begin{center}
+\begin{tabular}{|l|l*{10}{|c}|}
+\hline
+\multicolumn{2}{|l|}{} & labial & dental & alveolar & aveopalatal & palatal & \multicolumn{2}{c|}{velar} & \multicolumn{2}{c|}{uvular} & glottal \\\cline{8-11}
+
+\multicolumn{2}{|l|}{} &&&&&& plain & labial & plain & labial&\\\hline
+
+\multicolumn{2}{|l|}{nasal}  & m  && n && \textltailn & \textipa{N} & \textipa{N}\labial &&&\\\hline
+
+\multirow{4}{*}{stop} & plain &&& t (*d) && k\palatal (*g\palatal) & k (*g) & k\labial (*g\labial)& q (*\textipa{\;G})& q\labial (*\textipa{\;G}\labial) & \textipa{P} \\\cline{2-2}
+                      & aspirated &&& t\aspirated (*t) && k\aspirated\palatal (* k\palatal) & k\aspirated (*k) & k\aspirated\labial (*k\labial) & q\aspirated (*q) & q\aspirated\labial (*q\labial) & \\\cline{2-2}
+                      & ejective &&& t' && k\aspirated' & k' & k\labial' & q' & q\labial' & \\\hline
+
+\multirow{3}{*}{fricative} & central &&& s & \textipa{S} & x\palatal & x & x\labial & \textipa{X}&\\\cline{2-2}
+                           & lateral  &&& \textbeltl &&&&&&\\\hline
+
+\multirow{2}{*}{affricate} & lateral &&& t\textbeltl &&&&& \\\cline{2-2}
+                           & siblant &&& ts & t\textipa{S} - d\textipa{Z} &&&& \\\hline
+
+\multirow{2}{*}{ejective} & central &&& ts' & t\textipa{S}' &&&& \\\cline{2-2}
+                          & lateral &&& t\textbeltl' &&&&& \\\hline
+
+\end{tabular}
+\end{center}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Inventory}
 \begin{center}
@@ -184,7 +217,31 @@ Unrealized events, obligations, conditions, negative commands. Scoping - irreali
 
 \section{Aspect}
 
+\section{Aux and class agreement}
 
+\paragraph{Transitivity}
+In order to utilize a free Aux particle, the action must be highly transitive and have Agent-Patient as its core thematic roles. Semantically transitive verbs that do not satisfy these conditions are cast into intransitive forms by various means, among which we list the following
+
+\begin{itemize}
+\item \textbf{Noun incorporation}. Habitual activities (a)
+1  
+  \begin{xlista}
+    \ex rhisenuari \\
+        rhise-EPEN-varre-1SG \\
+        wood-cut-I \\
+        i cut wood / i wood-cut
+  \end{xlista}
+
+\end{itemize}
+
+\paragraph{Free Aux with intransitives}
+Free aux particle may be encountered with a syntactically intransitive verb in the following cases
+
+\begin{itemize}
+\item Some light verbs, e.g. \textit{-sayu} 
+\item Verb movement to the right
+\item Relative constructions
+\end{itemize}
 
 
 \chapter{Noun}
@@ -277,6 +334,9 @@ hw & nothing/noone & \textit{hwraza} - to love noone/nothing \\
   
   \dictitem{ket}{N, cl9, PL - kiit}{ a small bird, usually passerine}
   \dictitem{kissa}{N, cl2}{ need (state of)}
+  \dictitem{llel}{V, cl2}{ existential verb}
+  \dictitem{-sayu}{LV}{to call X by name, mention X}
+  \dictitem{-sun}{Adj-Aff}{ good, well-behaved}
   \end{description}
 \end{multicols}
 
